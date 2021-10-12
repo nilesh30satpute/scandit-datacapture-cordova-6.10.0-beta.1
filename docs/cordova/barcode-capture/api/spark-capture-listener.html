@@ -1,0 +1,304 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Spark Capture Listener &mdash; Data Capture SDK 6.10.0-beta.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Data Capture SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.10.0-beta.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">First Steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../samples/run-samples.html">Run our Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../add-sdk.html">Add the SDK to Your App</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Barcode Scanning</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../get-started-barcode.html">Get Started With Barcode Scanning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../barcode-symbologies.html">Barcode Symbologies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configure-barcodes.html">Configure Which Barcodes Are Read</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../optimize-performance.html">Optimize Scanning Performance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MatrixScan + Augmented Reality</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../get-started-matrixscan.html">Get Started With MatrixScan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../add-augmented-reality-overlay.html">Add AR Overlays in MatrixScan</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Text Capture</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../get-started-text-capture.html">Get Started With Text Capture</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ID Capture</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../get-started-id-capture.html">Get Started With ID Capture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../id-capture/supported-documents.html">List of supported documents</a></li>
+</ul>
+<p class="caption"><span class="caption-text">All Capture Modes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../camera-advanced.html">Advanced Camera Functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scan-area.html">Set up the Active Scan Area</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ui-examples.html">Choose the Scanner UI</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Parser</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../get-started-parser.html">Get Started With The Parser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../parser/formats.html">Supported Data Formats</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../core/overview.html">ScanditCaptureCore</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">ScanditBarcodeCapture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../text-capture/overview.html">ScanditTextCapture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../parser/overview.html">ScanditParser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../id-capture/overview.html">ScanditIdCapture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">Index</a></li>
+</ul>
+<p class="caption"><span class="caption-text">More Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../requirements.html">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Support &amp; FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features-by-platform.html">Features By Platform</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://docs.scandit.com/barcode-scanner-sdk.html">SDK 5.x Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migrate-to-6.html">Migrate from Barcode Scanner 5.x</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://ssl.scandit.com">Dashboard</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Data Capture SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Spark Capture Listener</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="spark-capture-listener">
+<h1>Spark Capture Listener<a class="headerlink" href="#spark-capture-listener" title="Permalink to this headline">#</a></h1>
+<p>Defined under the namespace <em>Scandit.Datacapture.Barcode.Spark</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Spark Capture API is still in beta and may change in future versions of the Scandit Data Capture SDK.</p>
+</div>
+<dl class="interface">
+<dt id="interface-scandit.datacapture.barcode.spark.ISparkCaptureListener">
+<code class="sig-name descname">SparkCaptureListener</code><a class="headerlink" href="#interface-scandit.datacapture.barcode.spark.ISparkCaptureListener" title="Permalink to this definition">#</a></dt>
+<dd><pre class="full-signature"><code class="sig-name descname">interface SparkCaptureListener</code></pre><p><span class="versionmodified versionadded">Added in version 6.9.0</span></p>
+<p>Listener interface for traditional spark capture.</p>
+<dl class="method">
+<dt id="method-scandit.datacapture.barcode.spark.ISparkCaptureListener.OnBarcodeScanned">
+<code class="sig-name descname">didScan(sparkCapture, session)</code><a class="headerlink" href="#method-scandit.datacapture.barcode.spark.ISparkCaptureListener.OnBarcodeScanned" title="Permalink to this definition">#</a></dt>
+<dd><pre class="full-signature"><code class="sig-name descname">didScan</code>?(<em>sparkCapture</em>: <a class="reference internal" href="spark-capture.html#class-scandit.datacapture.barcode.spark.SparkCapture" title="SparkCapture class">SparkCapture</a>,
+        <em>session</em>: <a class="reference internal" href="spark-capture-session.html#class-scandit.datacapture.barcode.spark.SparkCaptureSession" title="SparkCaptureSession class">SparkCaptureSession</a>): <code class="docutils literal notranslate"><span class="pre">void</span></code></pre><p><span class="versionmodified versionadded">Added in version 6.9.0</span></p>
+<p>Invoked whenever a code has been scanned. The newly scanned codes can be retrieved from <a class="reference internal" href="spark-capture-session.html#property-scandit.datacapture.barcode.spark.SparkCaptureSession.NewlyRecognizedBarcodes" title="SparkCaptureSession.newlyRecognizedBarcodes property">SparkCaptureSession.newlyRecognizedBarcodes</a>.</p>
+<p>This method is invoked from a recognition internal thread. To perform UI work, you must dispatch to the main thread first. After receiving this callback, you will typically want to start processing the scanned barcodes. Keep in mind however, that any further recognition is blocked until this method completes. Therefore, if you need to perform a time-consuming operation, like querying a database or opening an URL encoded in the barcode data, consider switching to another thread.</p>
+<p>Sometimes, after receiving this callback, you may want to pause scanning or to stop scanning completely.</p>
+<ul>
+<li><p>To pause scanning, but keep the camera (frame source) running, just set the spark capture’s <a class="reference internal" href="../../core/api/data-capture-mode.html#property-scandit.datacapture.core.IDataCaptureMode.IsEnabled" title="enabled property property">enabled property</a> to <em>false</em>.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">captureMode</span><span class="p">.</span><span class="nx">isEnabled</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p>To stop scanning, you will need to both <a class="reference internal" href="../../core/api/data-capture-mode.html#property-scandit.datacapture.core.IDataCaptureMode.IsEnabled" title="disable the capture mode property">disable the capture mode</a> and <a class="reference internal" href="../../core/api/frame-source.html#method-scandit.datacapture.core.IFrameSource.SwitchToDesiredStateAsync" title="stop the frame source method">stop the frame source</a>. While it’s possible to only stop the camera and keep the capture mode enabled, this may lead to additional scan events being delivered, which is typically not desired. The following lines of code show how to disable the capture mode and stop the frame source as well:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// no more didScan callbacks will be invoked after this call.</span>
+<span class="nx">captureMode</span><span class="p">.</span><span class="nx">isEnabled</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="c1">// asynchronously turn off the camera as quickly as possible.</span>
+<span class="nx">captureMode</span><span class="p">.</span><span class="nx">context</span><span class="p">.</span><span class="nx">frameSource</span><span class="p">.</span><span class="nx">switchToDesiredState</span><span class="p">(</span><span class="nx">Scandit</span><span class="p">.</span><span class="nx">FrameSourceState</span><span class="p">.</span><span class="nx">Off</span><span class="p">);</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-scandit.datacapture.barcode.spark.ISparkCaptureListener.OnSessionUpdated">
+<code class="sig-name descname">didUpdateSession(sparkCapture, session)</code><a class="headerlink" href="#method-scandit.datacapture.barcode.spark.ISparkCaptureListener.OnSessionUpdated" title="Permalink to this definition">#</a></dt>
+<dd><pre class="full-signature"><code class="sig-name descname">didUpdateSession</code>?(<em>sparkCapture</em>: <a class="reference internal" href="spark-capture.html#class-scandit.datacapture.barcode.spark.SparkCapture" title="SparkCapture class">SparkCapture</a>,
+        <em>session</em>: <a class="reference internal" href="spark-capture-session.html#class-scandit.datacapture.barcode.spark.SparkCaptureSession" title="SparkCaptureSession class">SparkCaptureSession</a>): <code class="docutils literal notranslate"><span class="pre">void</span></code></pre><p><span class="versionmodified versionadded">Added in version 6.9.0</span></p>
+<p>Invoked after a frame has been processed by spark capture and the session has been updated. In contrast to <a class="reference internal" href="#method-scandit.datacapture.barcode.spark.ISparkCaptureListener.OnBarcodeScanned" title="didScan() method">didScan()</a>, this method is invoked, regardless whether a code was scanned or not. If codes were recognized in this frame, this method is invoked after <a class="reference internal" href="#method-scandit.datacapture.barcode.spark.ISparkCaptureListener.OnBarcodeScanned" title="didScan() method">didScan()</a>.</p>
+<p>This method is invoked from a recognition internal thread. To perform UI work, you must dispatch to the main thread first. Further recognition is blocked until this method completes. It is thus recommended to do as little work as possible in this method.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Scandit AG
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-23556890-7', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
